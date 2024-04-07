@@ -1,4 +1,4 @@
-
+package deque;
 public class LinkedListDeque<T> implements Deque<T> {
     public class Node {
         private T value;
@@ -70,7 +70,8 @@ public class LinkedListDeque<T> implements Deque<T> {
         dropOne = sentinel.next;
         sentinel.next.next.prev = sentinel;
         sentinel.next = sentinel.next.next;
-        size --;
+        if(size != 0)
+            {size --;}
         return dropOne.value;
     }
 
@@ -82,7 +83,8 @@ public class LinkedListDeque<T> implements Deque<T> {
         dropOne = sentinel.prev;
         sentinel.prev.prev.next = sentinel;
         sentinel.prev = sentinel.prev.prev;
-        size --;
+        if(size != 0)
+            {size --;}
         return dropOne.value;
     }
 

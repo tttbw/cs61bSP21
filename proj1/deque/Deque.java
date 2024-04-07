@@ -1,3 +1,4 @@
+package deque;
 public interface Deque<T> {
     //  Adds an item of type T to the front of the deque. */
     public void addFirst(T item);
