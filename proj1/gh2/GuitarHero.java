@@ -44,8 +44,6 @@ public class GuitarHero {
             /* play the sample on standard audio */
             StdAudio.play(sample);
 
-
-
         }
     }
 }
